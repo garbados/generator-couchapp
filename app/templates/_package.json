@@ -1,5 +1,5 @@
 {
-  "name": "<%= pkg_name %>",
+  "name": "<%= _.slugify(pkg_name) %>",
   "version": "0.0.1",
   "description": "<%= description %>",
   "main": "app.js",
@@ -20,11 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/<%= username %>/<%= pkg_name %>.git"
+    "url": "git://github.com/<%= username %>/<%= _.slugify(pkg_name) %>.git"
   },
   "author": "<%= username %>",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/<%= username %>/<%= pkg_name %>/issues"
+    "url": "https://github.com/<%= username %>/<%= _.slugify(pkg_name) %>/issues"
   }
 }
