@@ -1,0 +1,30 @@
+{
+  "name": "<%= pkg_name %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "app.js",
+  "dependencies": {
+    "couchapp": "0.10.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-jade": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-couchapp": "~0.1.0",
+    "grunt-contrib-cssmin": "~0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<%= username %>/<%= pkg_name %>.git"
+  },
+  "author": "<%= username %>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/<%= username %>/<%= pkg_name %>/issues"
+  }
+}

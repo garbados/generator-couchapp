@@ -1,0 +1,6 @@
+{
+  "couchapp": {
+  	"db": "<%= remote_uri %>/<%= remote_db %>",
+  	"app": "app.js"
+  }
+}
