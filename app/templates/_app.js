@@ -3,7 +3,7 @@ var couchapp = require('couchapp')
   ;
 
 ddoc = {
-    _id: '_design/<%= pkg_name %>'
+    _id: '_design/<%= _.slugify(pkg_name) %>'
   , rewrites: require('./rewrites.json')
   , views: {}
   , lists: {}

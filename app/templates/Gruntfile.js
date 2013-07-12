@@ -23,7 +23,7 @@ module.exports = function(grunt) {
           'src/js/*.js'
         ],
         // the location of the resulting JS file
-        dest: '_attachments/js/app.js'
+        dest: 'attachments/js/app.js'
       }
     },
     uglify: {
@@ -32,14 +32,14 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          '_attachments/js/app.min.js': ['_attachments/js/app.js']
+          'attachments/js/app.min.js': ['attachments/js/app.js']
         }
       }
     },
     cssmin: {
       minify: {
         files: {
-          '_attachments/css/style.css': ['src/css/*.css']
+          'attachments/css/style.css': ['src/css/*.css']
         }
       }
     },
