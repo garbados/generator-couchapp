@@ -2,15 +2,3 @@ language: node_js
 node_js:
   - '0.8'
   - '0.10'
-
-before_install:
-  - "sudo apt-get install couchdb"
-  - "sudo service couchdb restart"
-  - "npm install -g grunt-cli"
-
-after_success:
-	- "sudo npm link"
-	- "mkdir couchapp"
-	- "cd couchapp"
-	- "yo couchapp"
-  - "grunt"
