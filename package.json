@@ -1,6 +1,6 @@
 {
   "name": "generator-couchapp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Yeoman generator that scaffolds Couchapps",
   "keywords": [
     "yeoman-generator",
