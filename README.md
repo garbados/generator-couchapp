@@ -8,6 +8,7 @@ A generator for Yeoman that scaffolds Couchapps. Comes with a Gruntfile to furth
     `npm install -g yo`
 - Install the generator: `npm install -g generator-couchapp`
 - Run: `yo couchapp`
+- Minify assets and push live with `grunt`
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
