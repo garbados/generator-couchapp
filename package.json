@@ -1,15 +1,17 @@
 {
   "name": "generator-couchapp",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.0.1",
+  "description": "A Yeoman generator that scaffolds Couchapps",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "couchdb",
+    "couchapp"
   ],
   "homepage": "https://github.com/garbados/generator-couchapp",
   "bugs": "https://github.com/garbados/generator-couchapp/issues",
   "author": {
-    "name": "Max",
-    "email": "",
+    "name": "Max Thayer",
+    "email": "garbados@gmail.com",
     "url": "https://github.com/garbados"
   },
   "main": "app/index.js",
