@@ -12,7 +12,7 @@ Before we begin, you'll need to install these:
 
 Then run this:
 
-	npm install git://github.com/<%= username %>/<%= pkg_name %>.git
+	npm install git://github.com/<%= username %>/<%= _.slugify(pkg_name) %>.git
 	npm install
 	grunt
 
