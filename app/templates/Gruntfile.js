@@ -43,11 +43,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    mkcouchdb: {
-      app: {
-        db: config.couchapp.db
-      }
-    },
     couchapp: {
       app: config.couchapp
     }
@@ -66,7 +61,6 @@ module.exports = function(grunt) {
   , 'concat'
   , 'uglify'
   , 'cssmin'
-  , 'mkcouchdb'
   , 'couchapp'
   ]);
 
