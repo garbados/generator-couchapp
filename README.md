@@ -10,5 +10,9 @@ A generator for Yeoman that scaffolds Couchapps. Comes with a Gruntfile to furth
 - Run: `yo couchapp`
 - Minify assets and push live with `grunt`
 
+If `grunt` reports `ECONNREFUSED`, make sure your `config.json`'s `db` value points to a running 
+CouchDB / Cloudant instance. For example, if your `db` is "http://localhost:5984/couchapp", make sure a CouchDB 
+instance is running locally and accepting requests on port 5984. 
+
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
