@@ -33,7 +33,6 @@ describe('couchapp generator', function () {
     , 'username': 'testfacebutt'
     , 'remote_uri': 'http://localhost:5984'
     , 'remote_db': 'testfacebuttblog'
-    , 
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
