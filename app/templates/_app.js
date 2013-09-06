@@ -1,14 +1,13 @@
-var couchapp = require('couchapp')
-  , path = require('path')
-  ;
+var couchapp = require('couchapp'),
+    path = require('path');
 
-ddoc = {
-    _id: '_design/<%= _.slugify(pkg_name) %>'
-  , rewrites: require('./rewrites.json')
-  , views: {}
-  , lists: {}
-  , shows: {}
-}
+var ddoc = {
+  _id: '_design/<%= _.slugify(pkg_name) %>',
+  rewrites: require('./rewrites.json'),
+  views: {},
+  lists: {},
+  shows: {}
+};
 
 couchapp.loadAttachments(ddoc, path.join(__dirname, 'attachments'));
 

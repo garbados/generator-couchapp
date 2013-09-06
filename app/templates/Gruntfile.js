@@ -1,6 +1,6 @@
 var config = require('./config.json');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
@@ -9,7 +9,6 @@ module.exports = function(grunt) {
       files: ['src/js/app.js'],
       options: {
         browser: true
-      , laxcomma: true
       }
     },
     concat: {
@@ -49,7 +48,7 @@ module.exports = function(grunt) {
   });
 
   // Load plugins
-  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -57,11 +56,11 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', [
-    'jshint'
-  , 'concat'
-  , 'uglify'
-  , 'cssmin'
-  , 'couchapp'
+    'jshint',
+    'concat',
+    'uglify',
+    'cssmin',
+    'couchapp'
   ]);
 
 };
