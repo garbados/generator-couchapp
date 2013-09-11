@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      files: ['src/js/app.js'],
+      files: ['src/js/app.js', 'app.js', 'Gruntfile.js'],
       options: {
         browser: true
       }
@@ -41,6 +41,9 @@ module.exports = function (grunt) {
           'attachments/css/style.css': ['src/css/*.css']
         }
       }
+    },
+    mkcouchdb: {
+      app: config.couchapp
     },
     couchapp: {
       app: config.couchapp
