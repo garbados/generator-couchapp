@@ -61,6 +61,7 @@ module.exports = function (grunt) {
     'concat',
     'uglify',
     'cssmin',
+    'mkcouchdb',
     'couchapp'
   ]);
 
