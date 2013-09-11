@@ -35,22 +35,53 @@ CouchappGenerator.prototype.askFor = function askFor() {
     name: 'username',
     message: "What is your GitHub username?"
   },{
+    type: 'boolean',
+    name: 'is_on_cloudant',
+    message: "Are you deploying this CouchApp to Cloudant?",
+    default: true
+  },{
+    name: 'remote_db',
+    message: "What database will the CouchApp use?",
+    default: 'couchapp'
+  }];
+
+  var couchdb_prompts = [{
     name: 'remote_uri',
     message: "What's the URL for your CouchDB instance?",
     default: "http://localhost:5984"
+  }];
+
+  var cloudant_prompts = [{
+    name: 'username',
+    message: 'What is your Cloudant username?'
   },{
-    name: 'remote_db',
-    message: "What database will the Couchapp use?",
-    default: 'couchapp'
-  }
-  ];
+    type: 'password',
+    name: 'password',
+    message: 'What is your Cloudant password?'
+  }];
 
   this.prompt(prompts, function (props) {
-    for(var key in props){
+
+    for (var key in props) {
       this[key] = props[key];
     }
 
-    cb();
+    if (props.is_on_cloudant) {
+      this.prompt(cloudant_prompts, function (props) {
+        console.log(props);
+        for(var key in props){
+          this[key] = props[key];
+        }
+        cb();
+      }.bind(this));
+    } else {
+      this.prompt(couchdb_prompts, function (props) {
+        for(var key in props){
+          this[key] = props[key];
+        }
+        cb();
+      }.bind(this));
+    }
   }.bind(this));
 };
 

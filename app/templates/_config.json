@@ -1,6 +1,6 @@
 {
   "couchapp": {
-  	"db": "<%= remote_uri %>/<%= remote_db %>",
+  	"db": "<% if (is_on_cloudant) { %>https://<%= username %>:<%= password %>@<%= username %>.cloudant.com<% } else { %><%= remote_uri %><% } %>/<%= remote_db %>",
   	"app": "app.js",
     "options": {
       "okay_if_exists": true,
