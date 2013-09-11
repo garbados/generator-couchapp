@@ -62,14 +62,14 @@ CouchappGenerator.prototype.askFor = function askFor() {
   this.prompt(prompts, function (props) {
     var is_on_cloudant;
 
-    for(var key in props){
+    for (var key in props) {
       if ((key === 'is_on_cloudant') && props[key]) {
         is_on_cloudant = true;
       }
       this[key] = props[key];
     }
 
-    if(is_on_cloudant){
+    if (is_on_cloudant) {
       this.prompt(cloudant_prompts, function (props) {
         console.log(props);
         for(var key in props){
