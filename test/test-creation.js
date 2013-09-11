@@ -28,11 +28,12 @@ describe('couchapp generator', function () {
     ];
 
     helpers.mockPrompt(this.app, {
-      'pkg_name': 'test'
-    , 'description': 'testface'
-    , 'username': 'testfacebutt'
-    , 'remote_uri': 'http://localhost:5984'
-    , 'remote_db': 'testfacebuttblog'
+      'pkg_name': 'test',
+      'description': 'testface',
+      'username': 'testfacebutt',
+      'is_on_cloudant': false,
+      'remote_uri': 'http://localhost:5984',
+      'remote_db': 'testfacebuttblog'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
