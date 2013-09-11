@@ -26,9 +26,7 @@ module.exports = function (grunt) {
       }
     },
     uglify: {
-      options: {
-        mangle: false
-      },
+      options: {},
       build: {
         files: {
           'attachments/js/app.min.js': ['attachments/js/app.js']
