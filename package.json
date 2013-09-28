@@ -1,22 +1,24 @@
 {
-  "name": "generator-webapp",
-  "version": "0.4.3",
-  "description": "Scaffold out a front-end web app",
+  "name": "generator-couchapp",
+  "version": "0.1.0",
+  "description": "Scaffold out a front-end web app; based on generator-webapp",
   "keywords": [
     "yeoman-generator",
     "web",
     "app",
     "front-end",
     "h5bp",
-    "modernizr"
+    "modernizr",
+    "couchdb",
+    "couchapp"
   ],
-  "homepage": "https://github.com/yeoman/generator-webapp",
-  "bugs": "https://github.com/yeoman/generator-webapp/issues",
+  "homepage": "https://github.com/garbados/generator-couchapp",
+  "bugs": "https://github.com/garbados/generator-couchapp/issues",
   "author": "Chrome Developer Relations",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/generator-webapp.git"
+    "url": "git://github.com/garbados/generator-couchapp.git"
   },
   "scripts": {
     "test": "mocha --reporter spec"

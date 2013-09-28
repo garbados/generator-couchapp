@@ -296,6 +296,12 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        mkcouchdb: {
+            app: require('./couchapp.json')
+        },
+        couchapp: {
+            app: require('./couchapp.json')
+        },
         // Put files not handled in other tasks here
         copy: {
             dist: {
@@ -373,6 +379,11 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
+
+    grunt.registerTask('deploy', [
+        'mkcouchdb',
+        'couchapp'
+    ]);
 
     grunt.registerTask('test', [
         'clean:server',

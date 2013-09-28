@@ -12,7 +12,7 @@ describe('Webapp generator test', function () {
         return done(err);
       }
 
-      this.webapp = helpers.createGenerator('webapp:app', [
+      this.webapp = helpers.createGenerator('couchapp:app', [
         '../../app', [
           helpers.createDummyGenerator(),
           'mocha:app'
@@ -32,6 +32,8 @@ describe('Webapp generator test', function () {
       ['bower.json', /"name": "temp"/],
       ['package.json', /"name": "temp"/],
       ['Gruntfile.js', /coffee:/],
+      ['app.js', /_design/],
+      ['couchapp.json', /okay_if_exists/],
       'app/404.html',
       'app/favicon.ico',
       'app/robots.txt',
@@ -57,6 +59,8 @@ describe('Webapp generator test', function () {
     var expected = [
       ['bower.json', /"name": "temp"/],
       ['package.json', /"name": "temp"/],
+      ['app.js', /_design/],
+      ['couchapp.json', /okay_if_exists/],
       'Gruntfile.js',
       'app/404.html',
       'app/favicon.ico',

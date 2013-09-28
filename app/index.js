@@ -60,6 +60,18 @@ AppGenerator.prototype.askFor = function askFor() {
       value: 'includeModernizr',
       checked: true
     }]
+  }, {
+    name: 'db',
+    message: 'What database will your couchapp use?',
+    default: 'couchapp'
+  }, {
+    name: 'app',
+    message: 'What design doc will your couchapp deploy to?',
+    default: 'app'
+  }, {
+    name: 'uri',
+    message: 'What CouchDB instance will your couchapp deploy to?',
+    default: 'http://localhost:5984'
   }];
 
   this.prompt(prompts, function (answers) {
@@ -73,6 +85,12 @@ AppGenerator.prototype.askFor = function askFor() {
     this.includeRequireJS = hasFeature('includeRequireJS');
     this.includeModernizr = hasFeature('includeModernizr');
 
+    this.couchapp = {
+      db: answers.db,
+      app: answers.app,
+      uri: answers.uri
+    };
+
     cb();
   }.bind(this));
 };
@@ -83,6 +101,11 @@ AppGenerator.prototype.gruntfile = function gruntfile() {
 
 AppGenerator.prototype.packageJSON = function packageJSON() {
   this.template('_package.json', 'package.json');
+};
+
+AppGenerator.prototype.CouchAppConfig = function couchapp() {
+  this.template('_app.js', 'app.js');
+  this.template('_couchapp.json', 'couchapp.json');
 };
 
 AppGenerator.prototype.git = function git() {

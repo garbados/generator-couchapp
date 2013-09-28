@@ -1,0 +1,7 @@
+{
+  "app": "app.js",
+  "db": "<%= couchapp.uri %>/<%= couchapp.db %>",
+  "options": {
+    "okay_if_exists": true
+  }
+}

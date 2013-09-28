@@ -1,6 +1,8 @@
-# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-webapp.png?branch=master)](http://travis-ci.org/yeoman/generator-webapp)
+# CouchApp generator [![Build Status](https://secure.travis-ci.org/garbados/generator-couchapp.png?branch=master)](http://travis-ci.org/garbados/generator-couchapp)
 
-Yeoman generator that scaffolds out a front-end web app.
+Yeoman generator that scaffolds out a front-end web app, and deploys them as CouchApps.
+
+Stolen almost entirely from [generator-webapp](https://github.com/yeoman/generator-webapp).
 
 ## Features
 
@@ -15,13 +17,13 @@ Yeoman generator that scaffolds out a front-end web app.
 * Optional - Twitter Bootstrap for SASS
 * Optional - Leaner Modernizr builds (new)
 
-For more information on what `generator-webapp` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp/blob/master/app/templates/_package.json) used in our `package.json`.
+For more information on what `generator-couchapp` can do for you, take a look at the [Grunt tasks](https://github.com/garbados/generator-couchapp/blob/master/app/templates/_package.json) used in our `package.json`.
 
 ## Getting Started
 
-- Install: `npm install -g generator-webapp`
-- Run: `yo webapp`
-- Run `grunt` for building and `grunt server` for preview
+- Install: `npm install -g generator-couchapp`
+- Run: `yo couchapp`
+- Run `grunt` for building, `grunt server` for preview, and `grunt deploy` to push to CouchDB.
 
 
 ## Options
@@ -40,12 +42,12 @@ For more information on what `generator-webapp` can do for you, take a look at t
 
 ## Contribute
 
-See the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)
+Want something? Either:
 
-Note: We are regularly asked whether we can add or take away features. If a change is good enough to have a positive impact on all users, we are happy to consider it.
+1. Raise an [issue](https://github.com/garbados/generator-couchapp/issues).
+2. Fork me, and make a pull request.
 
-If not, `generator-webapp` is fork-friendly and you can always maintain a custom version which you `npm install && npm link` to continue using via `yo webapp` or a name of your choosing.
-
+Happy to consider any changes :D
 
 ## License
 
