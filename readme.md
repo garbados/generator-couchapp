@@ -1,6 +1,6 @@
 # CouchApp generator [![Build Status](https://secure.travis-ci.org/garbados/generator-couchapp.png?branch=master)](http://travis-ci.org/garbados/generator-couchapp)
 
-Yeoman generator that scaffolds out a front-end web app, and deploys them as CouchApps.
+Yeoman generator that scaffolds front-end web apps, and deploys them as CouchApps.
 
 Stolen almost entirely from [generator-webapp](https://github.com/yeoman/generator-webapp).
 
