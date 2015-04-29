@@ -59,6 +59,10 @@ AppGenerator.prototype.askFor = function askFor() {
       name: 'Modernizr',
       value: 'includeModernizr',
       checked: true
+    }, {
+      name: 'PouchDB',
+      value: 'includePouchDB',
+      checked: true
     }]
   }, {
     name: 'db',
@@ -84,6 +88,7 @@ AppGenerator.prototype.askFor = function askFor() {
     this.compassBootstrap = hasFeature('compassBootstrap');
     this.includeRequireJS = hasFeature('includeRequireJS');
     this.includeModernizr = hasFeature('includeModernizr');
+    this.includePouchDB = hasFeature('includePouchDB');
 
     this.couchapp = {
       db: answers.db,
