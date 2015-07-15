@@ -52,6 +52,10 @@ AppGenerator.prototype.askFor = function askFor() {
       value: 'compassBootstrap',
       checked: true
     }, {
+      name: 'Material Design Lite',
+      value: 'includeMDL',
+      checked: false
+    }, {
       name: 'RequireJS',
       value: 'includeRequireJS',
       checked: true
@@ -86,6 +90,7 @@ AppGenerator.prototype.askFor = function askFor() {
     // manually deal with the response, get back and store the results.
     // we change a bit this way of doing to automatically do this in the self.prompt() method.
     this.compassBootstrap = hasFeature('compassBootstrap');
+    this.includeMDL = hasFeature('includeMDL');
     this.includeRequireJS = hasFeature('includeRequireJS');
     this.includeModernizr = hasFeature('includeModernizr');
     this.includePouchDB = hasFeature('includePouchDB');
@@ -167,6 +172,11 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
     }
   }
 
+  if (this.includeMDL && !this.includeRequireJS) {
+    this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
+      'bower_components/material-design-lite/material.js'
+    ]);
+  }
   if (this.compassBootstrap && !this.includeRequireJS) {
     // wire Twitter Bootstrap plugins
     this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
