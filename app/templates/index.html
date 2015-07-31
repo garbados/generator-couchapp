@@ -10,12 +10,21 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:css({app,.tmp}) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css"><% if (includeMDL) { %>
+        <link rel="stylesheet" href="bower_components/material-design-lite/material.css">
+        <% } %>
         <!-- endbuild --><% if (includeModernizr) { %>
+        <% if (includeMDL) { %>
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <% } %>
+
+        <!-- bower:css -->
+        <!-- endbower -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild --><% } %>
+
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -70,13 +79,22 @@
             <li>HTML5 Boilerplate</li>
             <% if (includeModernizr) { %><li>Modernizr</li><% } %>
             <% if (includeRequireJS) { %><li>RequireJS</li><% } %>
+            <% if (includeMDL) { %>
+            <li><a href="http://www.getmdl.io/started/index.html">Material Design Light</a></li>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+              Cool Button
+            </button>
+            <% } %>
           </ul>
         </div>
         <% } // compassBootstrap %>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <% if (includeMDL) { %>
+        <script src="bower_components/material-design-lite/material.js"></script>
+        <% } %>
         <!-- endbower -->
         <!-- endbuild -->
 
